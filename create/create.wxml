@@ -1,0 +1,10 @@
+<view class="header">
+  <button class="back-button" bindtap="goBack">返回</button>
+</view>
+<view class="container">
+  <view class="form-container">
+    <input placeholder="项目名称" bindinput="onTitleChange" />
+    <textarea placeholder="项目描述" bindinput="onDescriptionChange"></textarea>
+    <button bindtap="submitProject">发布项目</button>
+  </view>
+</view>
