@@ -1,0 +1,6 @@
+<view class="container">
+  <view class="button-container">
+    <button bindtap="createProject">发布项目</button>
+    <button bindtap="viewProjects">项目广场</button>
+  </view>
+</view>
