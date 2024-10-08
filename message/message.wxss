@@ -1,0 +1,97 @@
+html, body {
+  height: 100%; /* 设置html和body高度为100% */
+  margin: 0; /* 去除默认的外边距 */
+}
+
+.container {
+  display: flex;            /* 启用 Flexbox */
+  flex-direction: column;   /* 设置为垂直排列 */
+  justify-content: flex-start; /* 从顶部开始排列子元素 */
+  min-height: 100vh;       /* 确保容器至少占满整个视口高度 */
+  background: linear-gradient(to bottom, #a8d8ff, #e1f5fe); /* 渐变浅蓝色背景 */
+  padding: 20px;           /* 内边距 */
+  box-sizing: border-box;  /* 包含内边距在内的总高度 */
+}
+.face {
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 40rpx;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 增加阴影效果 */
+}
+
+.user-list {
+  display: flex;
+  flex-direction: row;
+  align-items: center; /* 垂直居中对齐 */
+  margin: 30rpx 20rpx;
+  padding: 20rpx;
+  background-color: #ffffff; /* 背景色 */
+  border-radius: 20rpx; /* 圆角 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+
+.nick-name {
+  font-size: 32rpx; /* 设置字体大小 */
+  font-weight: bold; /* 字体加粗 */
+  color: #333333; /* 字体颜色 */
+}
+
+.left {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.right {
+  margin-top: 20rpx;
+  text-align: right;
+}
+
+.msg {
+  display: inline-block;
+  color: #a0a0a0;
+  font-size: 28rpx;
+  overflow: hidden;
+  width: 400rpx;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  line-height: 1.2; /* 调整行高 */
+}
+
+.time {
+  font-size: 24rpx;
+  color: #b0b0b0; /* 调整颜色，使时间更淡 */
+  margin-top: 10rpx;
+  text-align: right;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.no-message {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 200rpx;
+}
+
+.no-message image {
+  width: 200rpx; /* 设置图片大小 */
+  height: 200rpx;
+  margin-bottom: 20rpx; /* 与提示文字的间距 */
+  opacity: 0.8; /* 透明度，营造柔和效果 */
+}
+
+.no-message .text {
+  font-size: 28rpx;
+  color: #a0a0a0;
+  text-align: center;
+  line-height: 1.5;
+}
+

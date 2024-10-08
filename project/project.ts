@@ -6,7 +6,7 @@ Page({
     projects: [] // 存储项目列表
   },
 
-  onLoad(options: any) {
+  onShow() {  // 在页面显示时重新加载数据
     this.getProjects();
   },
 
@@ -17,11 +17,7 @@ Page({
     });
     //console.log('项目列表:', this.data.projects); // 用于调试
   },
-  goBack() {
-    wx.redirectTo({
-      url: '/pages/index/index' // 主界面的路径
-    });
-  },
+ 
   goToDetail(event: any) {
     const { title, description } = event.currentTarget.dataset;
     wx.navigateTo({
