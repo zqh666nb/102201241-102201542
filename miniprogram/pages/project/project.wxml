@@ -2,7 +2,7 @@
   <view class="welcome-text">
     <text class="welcome-message">Hi~欢迎来到项目广场</text>
   </view>
-
+  <image src="/images/3.png" mode="aspectFit"></image>
   <view class="project-list">
     <block wx:for="{{projects}}" wx:key="index">
       <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}">

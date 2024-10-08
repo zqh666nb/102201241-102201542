@@ -20,13 +20,30 @@
     border-radius:50%;
 }
 
+.welcome-text {
+  display: flex;
+  justify-content: center;   /* 水平居中 */
+  align-items: center;       /* 垂直居中 */
+  margin: 20px 0;           /* 上下间距 */
+}
 
+.welcome-message {
+  font-size: 24px;          /* 字体大小 */
+  font-weight: bold;        /* 字体加粗 */
+  color: #2c3e50;          /* 字体颜色 */
+  text-align: center;       /* 文本居中 */
+}
 .userNickname {
     margin-top: 50rpx;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: large;
+}
+.welcome-message1 {
+  font-size: 18px;          /* 字体大小 */
+  color: #097ef3;          /* 字体颜色 */
+  text-align: center;       /* 文本居中 */
 }
 
 .label-list{
@@ -53,9 +70,11 @@
     vertical-align:middle;
 }
 
+  
 .buttonType {
+  
     margin-left: 200rpx;
-    margin-top: 20rpx;
+    margin-top: 50rpx;
 }
 
 .confirmButtonType {

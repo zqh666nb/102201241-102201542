@@ -1,7 +1,11 @@
 
-<image class="circleImage" src="{{userInfo.avatarUrl}}"></image>
-<view class="userNickname">{{userInfo.nickName}}</view>
-
+<view class="welcome-text">
+    <text class="welcome-message">欢迎来到ProjectPartner！</text>
+  </view>
+  <view class="welcome-text">
+    <text class="welcome-message1">在这里找到志同道合的小伙伴吧~</text>
+  </view>
+  <image src="/images/3.png" mode="aspectFit"  style="position: relative; left: 68rpx; top: -18rpx"></image>
 <view class="label-list">
     <view class="label">账号</view>
     <view class="input-box">
