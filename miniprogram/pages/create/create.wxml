@@ -1,8 +1,9 @@
 
 <view class="container">
+  <image src="/images/2.png" mode="aspectFit" style="width: 362rpx; height: 250rpx; display: block; box-sizing: border-box"></image>
   <view class="form-container">
     <input placeholder="项目名称" bindinput="onTitleChange" />
-    <textarea placeholder="项目描述" bindinput="onDescriptionChange"></textarea>
+    <textarea placeholder="项目描述" bindinput="onDescriptionChange" style="height: 552rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; width: 652rpx"></textarea>
     <button bindtap="submitProject">发布项目</button>
   </view>
 </view>
