@@ -1,7 +1,5 @@
 <!-- projectDetail.wxml -->
-<view class="header">
-  <button class="back-button" bindtap="goBack">返回</button>
-</view>
+
 <view class="container">
   <view class="project-list">
   <view class="project-detail">

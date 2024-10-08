@@ -16,11 +16,7 @@ Page({
       icon: 'success'
     });
   },
-  goBack() {
-    wx.redirectTo({
-      url: '/pages/index/index' // 主界面的路径
-    });
-  },
+
   goToChat() {
     wx.navigateTo({
       url: '/pages/chat/chat'

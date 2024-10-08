@@ -1,0 +1,125 @@
+.inputBox {
+  width: 70%;
+  padding: 10rpx 14rpx;
+  margin: 8rpx 0;
+  margin-left: 100rpx;
+  box-sizing: border-box;
+  border: 1rpx solid #aaa;
+  border-radius: 8rpx; /* 添加圆角 */
+  outline: none;
+}
+
+.circleImage {
+  margin: 80rpx auto 40rpx auto; /* 上下居中调整 */
+  height: 245rpx;
+  width: 245rpx;
+  border-radius: 50%;
+  display: block; /* 水平居中 */
+}
+
+.userNickname {
+  margin-top: 30rpx;
+  text-align: center; /* 居中显示 */
+  font-size: 40rpx;
+  color: #333;
+  font-weight: bold;
+  
+}
+
+.label-list {
+  display: flex;
+  width: 100%;
+  height: 50rpx;
+  align-items: center;
+  border-bottom: 1rpx solid #e8e8e8;
+  padding: 10rpx 0; /* 上下内边距 */
+  display: block; /* 水平居中 */
+}
+
+.label-list .label {
+  color: #333;
+  font-size: 32rpx;
+  margin-left: 0rpx;
+  font-weight: bold;
+  text-align: center;
+  display: block; /* 水平居中 */
+}
+
+.input-box {
+  position: relative;
+  left: 20px;
+}
+
+.place {
+  align-items: center;
+  font-size: 32rpx;
+  left: 20rpx;
+  color: #666;
+}
+
+.buttonType,
+.confirmButtonType {
+  margin: 30rpx auto 0 auto; /* 居中对齐 */
+  padding: 20rpx 40rpx; /* 内边距 */
+  background-color: #007aff;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 按钮阴影 */
+}
+
+.my-projects {
+  border-bottom: 1rpx solid #e8e8e8;
+  margin-top: 40rpx;
+  padding-bottom: 10rpx;
+}
+
+.projects-title {
+  font-size: 36rpx;
+  font-weight: bold;
+  margin: 0 0 20rpx 20rpx;
+  color: #333;
+}
+
+.projects-list {
+  margin-top: 10rpx;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.project-item {
+  width: 90%;
+  padding: 20rpx;
+  border: 1rpx solid #ddd;
+  margin-bottom: 20rpx;
+  border-radius: 10rpx;
+  background-color: #f7f9fa;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+}
+.project-info {
+  display: flex;            /* 使用flex布局 */
+  flex-direction: column;   /* 垂直排列 */
+  
+}
+
+.project-title {
+  font-size: 18px;          /* 项目名称字体大小 */
+  font-weight: bold;        /* 字体加粗 */
+  color: #34495e;           /* 项目名称字体颜色 */
+  margin-bottom: 10rpx;
+}
+
+.project-description {
+  font-size: 14px;          /* 项目描述字体大小 */
+  color: #7f8c8d;           /* 项目描述字体颜色 */
+}
+
+.no-projects {
+  text-align: center;
+  font-size: 28rpx;
+  color: #7f8c8d;
+  margin-top: 20rpx;
+  padding: 20rpx;
+}

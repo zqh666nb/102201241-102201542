@@ -1,13 +1,17 @@
-<view class="header">
-  <button class="back-button" bindtap="goBack">返回</button>
-</view>
 <view class="container">
+  <view class="welcome-text">
+    <text class="welcome-message">Hi~欢迎来到项目广场</text>
+  </view>
+
   <view class="project-list">
     <block wx:for="{{projects}}" wx:key="index">
-      <view class="project-item" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}">
-        <text class="project-title">项目名称: {{item.title.length > 10 ? (item.title.substring(0, 10) + '...') : item.title}}</text>
-        <text class="project-description">项目描述: {{item.description.length > 10 ? (item.description.substring(0, 10) + '...') : item.description}}</text>
+      <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}">
+        <view class="project-info">
+          <text class="project-title">项目名称: {{item.title.length > 10 ? '点击查看详情': item.title}}</text>
+          <text class="project-description">项目描述: {{item.description.length > 10 ?'点击查看详情' : item.description}}</text>
+        </view>
       </view>
+      <view class="divider"></view> <!-- 添加分隔线 -->
     </block>
     <block wx:if="{{projects.length === 0}}">
       <text class="no-projects">广场中暂时没有项目哦~</text>
