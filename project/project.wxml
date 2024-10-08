@@ -1,0 +1,16 @@
+<view class="header">
+  <button class="back-button" bindtap="goBack">返回</button>
+</view>
+<view class="container">
+  <view class="project-list">
+    <block wx:for="{{projects}}" wx:key="index">
+      <view class="project-item" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}">
+        <text class="project-title">项目名称: {{item.title.length > 10 ? (item.title.substring(0, 10) + '...') : item.title}}</text>
+        <text class="project-description">项目描述: {{item.description.length > 10 ? (item.description.substring(0, 10) + '...') : item.description}}</text>
+      </view>
+    </block>
+    <block wx:if="{{projects.length === 0}}">
+      <text class="no-projects">广场中暂时没有项目哦~</text>
+    </block>
+  </view>
+</view>
