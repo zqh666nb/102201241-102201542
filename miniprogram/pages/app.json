@@ -5,6 +5,7 @@
     "pages/user/user",
     "pages/message/message",
     "pages/friends/friends",
+    "pages/apply/apply",
     "pages/create/create",
     "pages/project/project",
     "pages/projectDetail/projectDetail",
