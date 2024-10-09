@@ -1,10 +1,14 @@
 <view class="container">
+
   <view class="welcome-text">
     <text class="welcome-message">Hi~欢迎来到项目广场</text>
   </view>
   <image src="/images/3.png" mode="aspectFit"></image>
+  <view class="search-bar">
+  <input type="text" placeholder="搜索项目" bindinput="onSearchInput" class="search-input"/>
+</view>
   <view class="project-list">
-    <block wx:for="{{projects}}" wx:key="index">
+    <block wx:for="{{filteredProjects}}" wx:key="index">
       <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}">
         <view class="project-info">
           <text class="project-title">项目名称: {{item.title}}</text>
@@ -13,7 +17,7 @@
       </view>
       <view class="divider"></view> <!-- 添加分隔线 -->
     </block>
-    <block wx:if="{{projects.length === 0}}">
+    <block wx:if="{{filteredProjects.length === 0}}">
       <text class="no-projects">广场中暂时没有项目哦~</text>
     </block>
   </view>
