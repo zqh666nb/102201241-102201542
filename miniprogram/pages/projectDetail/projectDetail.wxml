@@ -4,10 +4,18 @@
 
   <!-- 项目负责人信息 -->
   <view class="leader-info">
-    <text class="nickname">{{project.nickname}}</text>
+    <text class="nickname">创建人：{{project.nickname}}</text>
   </view>
-
+   <!-- 点赞 -->
+   <view class="leader-info">
+    <text class="nickname">点赞数：{{project.likecount}}</text>
+    
+  </view>
+  <button class="like-button" bindtap="increaseLikeCount">👍 点赞</button>
   <!-- 项目描述 -->
+  <view class="my-projects">
+    <text class="projects-title">项目描述：</text>
+  </view>
   <view class="project-detail-box">
     <text class="detail-content">{{project.description}}</text>
   </view>

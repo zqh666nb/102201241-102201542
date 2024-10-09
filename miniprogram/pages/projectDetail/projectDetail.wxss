@@ -24,6 +24,15 @@ html, body {
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
 }
+/* 在你的 WXSS 文件中添加样式 */
+.like-button {
+  font-size: 15px;         /* 字体大小 */
+  padding: 4px 8px;        /* 内边距 */
+  border-radius: 12px;     /* 圆角 */
+  background-color: #ffeb3b;  /* 背景颜色 */
+  color: #333;             /* 字体颜色 */
+  border: none;            /* 去掉边框 */
+}
 
 .project-title {
   font-size: 24px; /* Title font size */
@@ -35,7 +44,7 @@ html, body {
 .leader-info {
   display: flex; /* Use flex for leader info layout */
   align-items: center; /* Center vertically */
-  margin-bottom: 20px; /* Space below leader info */
+  margin-bottom: 5px; /* Space below leader info */
 }
 
 .avatar {
@@ -70,7 +79,12 @@ html, body {
   align-items: center; /* Center buttons */
   margin-top: 20px; /* Space above buttons */
 }
-
+.my-projects {
+  width: 100%;
+  margin: 20rpx 0;
+  padding-bottom: 0rpx;
+  text-align: left;
+}
 .apply-button, .chat-button {
   width: 80%; /* Button width */
   padding: 12px; /* Inner padding */
