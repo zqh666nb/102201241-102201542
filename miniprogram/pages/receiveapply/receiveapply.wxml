@@ -1,0 +1,18 @@
+<view class="container">
+  
+  <view class="project-list" style="position: relative; left: 0rpx; top: -60rpx">
+    <block wx:for="{{filteredProjects}}" wx:key="index">
+      <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}" data-nickname="{{item.nickname}}">
+        <view class="project-info">
+          <text class="project-title">申请人： {{item.title}}</text>
+          <text class="project-description">申请理由: {{item.nickname}}</text>
+          <text class="project-description">联系方式: {{item.description.length > 10 ?'点击查看详情' : item.description}}</text>
+        </view>
+      </view>
+      <view class="divider"></view> <!-- 添加分隔线 -->
+    </block>
+    <block wx:if="{{filteredProjects.length === 0}}">
+      <text class="no-projects">暂时没有收到申请哦~</text>
+    </block>
+  </view>
+</view>

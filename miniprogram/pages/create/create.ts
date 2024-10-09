@@ -5,9 +5,10 @@ Page({
     nickname: '',
     title: '',
     description: '',
+    likecount:0,
     titleMaxLength: 15,
     nicknameMaxLength: 10,
-    descriptionMaxLength: 30 // 最大字数限制
+    descriptionMaxLength: 200 // 最大字数限制
   },
 
   // 在页面加载时初始化输入框
@@ -84,7 +85,7 @@ Page({
   },
 
   submitProject() {
-    const { nickname, title, description } = this.data;
+    const { nickname, title, description ,likecount} = this.data;
 
     if (!nickname) {
       wx.showToast({
@@ -120,7 +121,8 @@ Page({
             title,
             description,
             nickname,
-            account_id // 添加创建者昵称
+            account_id, // 添加创建者昵称
+            likecount
           }
         }).then(res => {
           const newProject = {
@@ -128,7 +130,8 @@ Page({
             title,
             description,
             nickname,
-            account_id // 包含昵称
+            account_id, // 包含昵称
+            likecount
           };
 
           // 确保全局项目数组存在

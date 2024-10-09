@@ -6,9 +6,12 @@
     "pages/message/message",
     "pages/friends/friends",
     "pages/apply/apply",
+    "pages/receiveapply/receiveapply",
     "pages/create/create",
     "pages/project/project",
     "pages/projectDetail/projectDetail",
+    "pages/applydetail/applydetail",
+    "pages/myprojectDetail/myprojectDetail",
     "pages/chat/chat"
     
   ],
