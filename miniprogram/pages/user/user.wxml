@@ -1,6 +1,6 @@
 <view class="container">
     <view class="user-info">
-        <image class="circleImage" src="{{avatarUrl}}" style="position: relative; left: -100rpx; top: 0rpx"></image>
+        <image class="circleImage" src="{{avatarUrl}}" style="position: relative; left: -75rpx; top: 0rpx"></image>
         <view class="user-details">
             <view class="label-list" style="position: relative; left: -36rpx; top: -49rpx">
                 <text class="label" style="position: relative; left: -36rpx; top: -21rpx">昵称: {{userInfo.nickName}}</text>
@@ -29,6 +29,8 @@
         </view>
     </view>
 
-    <button bindtap="changeUserAvatar" class="buttonType1" style="position: relative; left: 125rpx; top: -545rpx; width: 156rpx; display: block; box-sizing: border-box; height: 83rpx">修改头像</button>
+    <button bindtap="changeUserAvatar" class="buttonType1" style="position: relative; left: 136rpx; top: -545rpx; width: 272rpx; display: block; box-sizing: border-box; height: 83rpx">修改头像</button>
     <button bindtap="changeUser" class="buttonType">切换用户</button>
 </view>
+
+

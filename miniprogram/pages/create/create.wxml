@@ -2,9 +2,12 @@
 <view class="container">
   <image src="/images/2.png" mode="aspectFit" style="width: 362rpx; height: 250rpx; display: block; box-sizing: border-box"></image>
   <view class="form-container">
-    <input placeholder="创建者昵称" bindinput="onnameChange" />
-    <input placeholder="项目标题" bindinput="onTitleChange" />
-    <textarea placeholder="项目描述" bindinput="onDescriptionChange" style="height: 493rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; width: 652rpx"></textarea>
+    <input placeholder="创建者昵称" value="{{nickname}}" bindinput="onnameChange" />
+    <text class="remaining">可输入剩余字符：{{nicknameMaxLength - nickname.length}}</text>
+    <input placeholder="项目标题" value="{{title}}" bindinput="onTitleChange" />
+    <text class="remaining">可输入剩余字符：{{titleMaxLength - title.length}}</text>
+    <textarea placeholder="项目描述" value="{{description}}" bindinput="onDescriptionChange" style="height: 493rpx; display: block; box-sizing: border-box; left: 0rpx; top: 0rpx; width: 652rpx"></textarea>
+    <text class="remaining">可输入剩余字符：{{descriptionMaxLength - description.length}}</text>
     <button bindtap="submitProject">发布项目</button>
   </view>
 </view>

@@ -3,6 +3,7 @@ const myapp = getApp();
 interface Project {
   title: string;
   description: string;
+  nickname:string;
 }
 Page({
   data: {
@@ -45,15 +46,16 @@ Page({
     
       const filteredProjects = projects.filter(project =>
         (project.title || '').toLowerCase().includes(searchTerm) ||
-        (project.description || '').toLowerCase().includes(searchTerm)
+        (project.description || '').toLowerCase().includes(searchTerm)||
+        (project.nickname || '').toLowerCase().includes(searchTerm)
       );
     
       this.setData({ filteredProjects: filteredProjects.reverse() }); // 反转过滤后的数组
     },
   goToDetail(event: any) {
-    const { title, description } = event.currentTarget.dataset;
+    const { title, nickname, description } = event.currentTarget.dataset;
     wx.navigateTo({
-      url: `/pages/projectDetail/projectDetail?title=${title}&description=${description}`
+      url: `/pages/projectDetail/projectDetail?title=${title}&nickname=${nickname}&description=${description}`
     });
   }
   
