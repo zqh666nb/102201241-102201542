@@ -1,0 +1,31 @@
+<view class="container">
+  <!-- 项目标题 -->
+  <text class="project-title">{{project.title}}</text>
+
+  <!-- 申请人信息 -->
+  <view class="my-projects">
+    <text class="projects-title">申请人：</text>
+  </view>
+  <view class="project-detail-box">
+    <text class="detail-content">{{project.nickname}}</text>
+  </view>
+
+  <!-- 申请理由 -->
+  <view class="my-projects">
+    <text class="projects-title">申请理由：</text>
+  </view>
+  <view class="project-detail-box">
+    <text class="detail-content">{{project.description}}</text>
+  </view>
+<!-- 联系方式 -->
+<view class="my-projects">
+    <text class="projects-title">联系方式：</text>
+  </view>
+<view class="project-detail-box">
+    <text class="detail-content">{{project.description}}</text>
+  </view>
+  <!-- 按钮区 -->
+  <view class="button-container">
+    <button class="apply-button" bindtap="applyForProject">同意</button>
+  </view>
+</view>

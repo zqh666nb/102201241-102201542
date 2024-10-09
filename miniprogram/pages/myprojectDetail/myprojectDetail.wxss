@@ -1,0 +1,120 @@
+/* projectDetail.wxss */
+html, body {
+  height: 100%; /* Set html and body height to 100% */
+  margin: 0; /* Remove default margin */
+}
+
+.container {
+  display: flex; /* Enable Flexbox */
+  flex-direction: column; /* Set vertical arrangement */
+  justify-content: flex-start; /* Start from the top */
+  min-height: 100vh; /* Ensure container takes at least full viewport height */
+  background: linear-gradient(to bottom, #a8d8ff, #e1f5fe); /* Light blue gradient background */
+  padding: 20px; /* Padding around container */
+  box-sizing: border-box; /* Include padding in total height */
+}
+
+.project-detail-box {
+  width: 100%; /* Full width */
+  display: flex; /* Use flex layout */
+  flex-direction: column; /* Vertical arrangement */
+  gap: 20px; /* Space between elements */
+  padding: 20px; /* Inner padding */
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.project-title {
+  font-size: 24px; /* Title font size */
+  font-weight: bold; /* Bold title */
+  color: #333; /* Darker color for better readability */
+  margin-bottom: 10px; /* Spacing below title */
+}
+
+.leader-info {
+  display: flex; /* Use flex for leader info layout */
+  align-items: center; /* Center vertically */
+  margin-bottom: 5px; /* Space below leader info */
+}
+
+.avatar {
+  width: 40px; /* Avatar width */
+  height: 40px; /* Avatar height */
+  border-radius: 50%; /* Circular avatar */
+  margin-right: 10px; /* Space between avatar and nickname */
+}
+
+.nickname {
+  font-size: 18px; /* Nickname font size */
+  color: #007aff; /* Link color */
+}
+
+.detail-label {
+  font-size: 18px; /* Label font size */
+  font-weight: bold; /* Bold label */
+  margin-bottom: 5px; /* Space below label */
+}
+
+.detail-content {
+  font-size: 16px; /* Content font size */
+  color: #666; /* Description color */
+  border: 1px solid #ccc; /* Border for detail content */
+  border-radius: 5px; /* Rounded corners */
+  padding: 10px; /* Inner padding */
+}
+
+.button-container {
+  display: flex; /* Use flex for button layout */
+  flex-direction: column; /* Vertical arrangement */
+  align-items: center; /* Center buttons */
+  margin-top: 20px; /* Space above buttons */
+}
+.my-projects {
+  width: 100%;
+  margin: 20rpx 0;
+  padding-bottom: 0rpx;
+  text-align: left;
+}
+.apply-button, .chat-button {
+  width: 80%; /* Button width */
+  padding: 12px; /* Inner padding */
+  background-color: #007aff; /* Button color */
+  color: white; /* Text color */
+  text-align: center; /* Center text */
+  border-radius: 5px; /* Rounded corners */
+  margin-top: 10px; /* Space above buttons */
+  font-size: 16px; /* Font size */
+  border: none; /* Remove border */
+  cursor: pointer; /* Pointer on hover */
+}
+
+.apply-button:hover, .chat-button:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}
+
+.header {
+  display: flex; /* Flex layout for header */
+  justify-content: flex-start; /* Left align */
+  align-items: center; /* Vertically center */
+  padding: 10px; /* Padding around header */
+  background-color: #f5f5f5; /* Header background color */
+}
+
+.back-button {
+  background-color: #007aff; /* Button color */
+  color: white; /* Font color */
+  border: none; /* Remove border */
+  padding: 5px 10px; /* Padding */
+  border-radius: 5px; /* Rounded corners */
+  position: absolute; /* Absolute positioning */
+  top: 20px; /* Distance from top */
+  left: 10px; /* Distance from left */
+  font-size: 14px; /* Font size */
+  max-width: 80px; /* Max width */
+  z-index: 10; /* Ensure button is on top */
+}
+
+.back-button:hover {
+  background-color: #005bb5; /* Darker shade on hover */
+}

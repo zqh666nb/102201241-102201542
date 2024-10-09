@@ -114,7 +114,7 @@ Page({
   goToDetail(event) {
     const { title, description,nickname} = event.currentTarget.dataset;
     wx.navigateTo({
-      url: `/pages/projectDetail/projectDetail?title=${title}&description=${description}&nickname=${nickname}`
+      url: `/pages/myprojectDetail/myprojectDetail?title=${title}&description=${description}&nickname=${nickname}`
     });
   },
   updateAvatar(url) {

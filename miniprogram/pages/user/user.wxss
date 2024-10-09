@@ -1,136 +1,128 @@
-html, body {
-  height: 100%; /* 设置html和body高度为100% */
-  margin: 0; /* 去除默认的外边距 */
-}
-
+/* 通用样式 */
 .container {
-  min-height: 100vh;  /* 确保容器至少占满整个视口高度 */
-  background: linear-gradient(to bottom, #a8d8ff, #e1f5fe); /* 渐变浅蓝色背景 */
+  min-height: 100vh;
   padding: 20px;
   box-sizing: border-box;
-  display: flex; /* 启用 Flexbox */
-  flex-direction: column; /* 设置为垂直排列 */
-  align-items: center; /* 水平居中 */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: linear-gradient(to bottom, #a8d8ff, #e1f5fe);
+}
+
+/* 用户信息区域 */
+.user-info {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
 .circleImage {
-  height: 245rpx;
-  width: 245rpx;
+  height: 180rpx;
+  width: 180rpx;
   border-radius: 50%;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
-}
-
-.user-info {
-  display: flex; /* 启用 Flexbox 布局 */
-  align-items: center; /* 垂直居中对齐 */
-  margin: 40rpx 0; /* 适当的上下边距 */
+  margin-left: 65rpx;
+  margin-right: 60rpx;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 .user-details {
-  display: flex; /* 启用 Flexbox 布局 */
-  flex-direction: column; /* 垂直排列昵称和账号 */
-  margin-left: 60rpx; /* 与头像之间的间距 */
+  
+  flex: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .label-list {
-  display: flex;
-  align-items: center; /* 垂直居中对齐 */
-  padding: 5rpx 0; /* 上下内边距 */
+  margin-left: 10rpx;
+  padding: 5rpx 0;
 }
 
 .label {
   color: #333;
-  font-size: 32rpx;
+  font-size: 28rpx;
   font-weight: bold;
 }
 
-.buttonType,
-.confirmButtonType {
-  margin: 30rpx auto; /* 居中对齐 */
-  padding: 20rpx 40rpx; /* 内边距 */
+/* 修改头像按钮 */
+.buttonType1 {
+  margin-top: 20rpx;
+  padding: 16rpx 30rpx;
   background-color: #007aff;
   color: white;
-  font-size: 32rpx;
+  font-size: 28rpx;
   border-radius: 8rpx;
   text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 按钮阴影 */
-  transition: background-color 0.1s; /* 添加过渡效果 */
-}
-.buttonType1,
-.confirmButtonType {
-  margin: 30rpx auto; /* 居中对齐 */
-  padding: 25rpx 25rpx; /* 内边距 */
-  background-color: #030216e7;
-  color: white;
-  font-size:25rpx;
-  border-radius: 30rpx;
-  text-align: center;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 按钮阴影 */
-  transition: background-color 0.1s; /* 添加过渡效果 */
-}
-.buttonType:hover,
-.confirmButtonType:hover {
-  background-color: #0056b3; /* 鼠标悬停时变暗 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+/* 我的项目标题 */
 .my-projects {
-  border-bottom: 1rpx solid #e8e8e8;
-  margin-top: -200rpx;
+  width: 100%;
+  margin: 20rpx 0;
   padding-bottom: 10rpx;
-  width: 100%; /* 填满宽度 */
+  text-align: left;
+  border-bottom: 1rpx solid #e8e8e8;
 }
 
 .projects-title {
-  font-size: 36rpx;
+  font-size: 34rpx;
   font-weight: bold;
-  margin: 20rpx 20rpx; /* 上下边距 */
   color: #333;
-  text-align: left; /* 左对齐 */
 }
 
+/* 项目列表区域 */
 .projects-list {
-  margin-top: 10rpx;
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .project-item {
-  width: 90%; /* 使用90%宽度 */
+  width: 90%;
   padding: 20rpx;
   border: 1rpx solid #ddd;
   margin-bottom: 20rpx;
   border-radius: 10rpx;
   background-color: #f7f9fa;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
-  transition: transform 0.3s; /* 添加过渡效果 */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s;
 }
 
 .project-item:hover {
-  transform: translateY(-2px); /* 鼠标悬停时稍微上升 */
+  transform: translateY(-2px);
 }
 
-.project-info {
-  display: flex; /* 使用flex布局 */
-  flex-direction: column; /* 垂直排列 */
-}
-
+/* 项目标题和描述样式 */
 .project-title {
-  font-size: 18px; /* 项目名称字体大小 */
-  font-weight: bold; /* 字体加粗 */
-  color: #34495e; /* 项目名称字体颜色 */
-  margin-bottom: 10rpx;
+  font-size: 30rpx;
+  font-weight: bold;
+  color: #34495e;
+  margin-bottom: 10rpx; /* 添加下边距使标题和描述间距更清晰 */
 }
 
 .project-description {
-  font-size: 14px; /* 项目描述字体大小 */
-  color: #7f8c8d; /* 项目描述字体颜色 */
+  font-size: 28rpx;
+  color: #7f8c8d;
 }
+
 
 .no-projects {
   text-align: center;
   font-size: 28rpx;
   color: #7f8c8d;
-  margin-top: 20rpx;
-  padding: 20rpx;
+}
+
+/* 切换用户按钮 */
+.switchUserButton {
+  margin-top: auto;
+  padding: 20rpx 40rpx;
+  background-color: #007aff;
+  color: white;
+  font-size: 32rpx;
+  border-radius: 8rpx;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  margin-bottom: 30rpx;
 }
