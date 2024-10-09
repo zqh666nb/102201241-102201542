@@ -1,13 +1,14 @@
 <view class="container">
-
-  <view class="welcome-text">
-    <text class="welcome-message">Hi~欢迎来到项目广场</text>
-  </view>
-  <image src="/images/3.png" mode="aspectFit"></image>
-  <view class="search-bar">
+  <image src="/images/icon/unknown.png" mode="aspectFit" style="width: 43rpx; height: 62rpx; display: block; box-sizing: border-box; position: relative; left: 290rpx; top: 3rpx"></image>
+  <view class="search-bar" style="position: relative; left: -1rpx; top: -72rpx">
   <input type="text" placeholder="搜索项目" bindinput="onSearchInput" class="search-input"/>
 </view>
-  <view class="project-list">
+  <view class="welcome-text">
+    <text class="welcome-message" style="position: relative; left: 0rpx; top: -83rpx">Hi~欢迎来到项目广场</text>
+  </view>
+  <image src="/images/3.png" mode="aspectFit" style="position: relative; left: 0rpx; top: -100rpx"></image>
+  
+  <view class="project-list" style="position: relative; left: 0rpx; top: -60rpx">
     <block wx:for="{{filteredProjects}}" wx:key="index">
       <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}">
         <view class="project-info">
@@ -18,7 +19,7 @@
       <view class="divider"></view> <!-- 添加分隔线 -->
     </block>
     <block wx:if="{{filteredProjects.length === 0}}">
-      <text class="no-projects">广场中暂时没有项目哦~</text>
+      <text class="no-projects">广场中暂时没有相关项目哦~</text>
     </block>
   </view>
 </view>
