@@ -8,7 +8,7 @@
   </view>
  <!-- 点赞 -->
  <view class="leader-info">
-    <text class="nickname">点赞数：{{project.nickname}}</text>
+    <text class="nickname">点赞数：{{project.likecount}}</text>
   </view>
 
   <!-- 项目描述 -->

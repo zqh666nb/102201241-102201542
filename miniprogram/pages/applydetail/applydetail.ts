@@ -1,34 +1,35 @@
-// projectDetail.ts
+// projectDetail.ts
 Page({
-  data: {
-    project: {
-      title: '',
-      
-      nickname: '',
-     
-      description: ''
-    }
-  },
-
-  onLoad(options: any) {
-    const { title, nickname, description } = options;
-    this.setData({
-      'project.title': title || '项目名称',
-      'project.nickname': nickname || '项目负责人昵称',
-      'project.description': description || '项目描述'
-    });
-  },
-
-  applyForProject() {
-    wx.navigateTo({
-      url: '/pages/apply/apply'
-    });    
-    
-  },
-
-  goToChat() {
-    wx.navigateTo({
-      url: '/pages/chat/chat'
-    });
-  }
-});
+    data: {
+      applications: {
+        reason: '',
+        
+        contact: '',
+       
+        account_id: ''
+      }
+    },
+  
+    onLoad(options: any) {
+      const { reason, contact, account_id } = options;
+      this.setData({
+        'application.reason': reason ,
+        'application.contact': contact ,
+        'application.account_id': account_id 
+      });
+    },
+  
+    applyForProject() {
+      wx.navigateTo({
+        url: '/pages/apply/apply'
+      });    
+      
+    },
+  
+    goToChat() {
+      wx.navigateTo({
+        url: '/pages/chat/chat'
+      });
+    }
+  });
+  
