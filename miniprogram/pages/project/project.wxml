@@ -10,7 +10,7 @@
   
   <view class="project-list" style="position: relative; left: 0rpx; top: -60rpx">
     <block wx:for="{{filteredProjects}}" wx:key="index">
-      <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}" data-nickname="{{item.nickname}}">
+      <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}" data-nickname="{{item.nickname}}"data-likecount="{{item.likecount}}" data-_id="{{item._id}}" >
         <view class="project-info">
           <text class="project-title">项目名称: {{item.title}}</text>
           <text class="project-description">创建者昵称: {{item.nickname}}</text>

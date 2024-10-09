@@ -4,6 +4,8 @@ interface Project {
   title: string;
   description: string;
   nickname:string;
+  likecount:Number;
+  _id:string
 }
 Page({
   data: {
@@ -53,9 +55,10 @@ Page({
       this.setData({ filteredProjects: filteredProjects.reverse() }); // 反转过滤后的数组
     },
   goToDetail(event: any) {
-    const { title, nickname, description } = event.currentTarget.dataset;
+    const { title, nickname, description ,likecount,_id} = event.currentTarget.dataset;
+    console.log('传入的项目 ID:', _id); // 检查传入的 ID
     wx.navigateTo({
-      url: `/pages/projectDetail/projectDetail?title=${title}&nickname=${nickname}&description=${description}`
+      url: `/pages/projectDetail/projectDetail?title=${title}&nickname=${nickname}&description=${description}&likecount=${likecount}&_id=${_id}`
     });
   }
   
