@@ -23,7 +23,7 @@
   <!-- 项目列表区域 -->
   <view class="projects-list">
     <block wx:for="{{projects}}" wx:key="index">
-      <view class="project-item" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}" data-nickname="{{item.nickname}}">
+      <view class="project-item" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}" data-nickname="{{item.nickname}}" data-likecount="{{item.likecount}}" data-_id="{{item._id}}"  >
         <view class="project-info">
           <!-- 强制换行显示项目标题和描述 -->
           <view class="project-title">项目标题: {{item.title.length > 10 ? '点击查看详情' : item.title}}</view>

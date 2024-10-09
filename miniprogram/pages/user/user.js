@@ -112,9 +112,10 @@ Page({
     });
   },
   goToDetail(event) {
-    const { title, description,nickname} = event.currentTarget.dataset;
+    const { title, description,nickname,likecount,_id} = event.currentTarget.dataset;
+    console.log('传入的点赞数:', likecount); // 检查传入的点赞数是否有效
     wx.navigateTo({
-      url: `/pages/myprojectDetail/myprojectDetail?title=${title}&description=${description}&nickname=${nickname}`
+      url: `/pages/myprojectDetail/myprojectDetail?title=${title}&description=${description}&nickname=${nickname}&likecount=${likecount}&_id=${_id}`
     });
   },
   updateAvatar(url) {

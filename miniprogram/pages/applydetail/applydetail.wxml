@@ -7,7 +7,7 @@
     <text class="projects-title">申请人：</text>
   </view>
   <view class="project-detail-box">
-    <text class="detail-content">{{project.nickname}}</text>
+    <text class="detail-content">{{application.account_id}}</text>
   </view>
 
   <!-- 申请理由 -->
@@ -15,14 +15,14 @@
     <text class="projects-title">申请理由：</text>
   </view>
   <view class="project-detail-box">
-    <text class="detail-content">{{project.description}}</text>
+    <text class="detail-content">{{application.reason}}</text>
   </view>
 <!-- 联系方式 -->
 <view class="my-projects">
     <text class="projects-title">联系方式：</text>
   </view>
 <view class="project-detail-box">
-    <text class="detail-content">{{project.description}}</text>
+    <text class="detail-content">{{application.contact}}</text>
   </view>
   <!-- 按钮区 -->
   <view class="button-container">
