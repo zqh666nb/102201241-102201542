@@ -1,31 +1,34 @@
-<image class="circleImage" src="{{avatarUrl}}"></image>
-
-<view class="label-list">
-    <view class="label">微信名: {{userInfo.nickName}}</view>
-</view>
-<view class="label-list"> 
-    <text class="label"> 账号: {{userInfo.account_id}}</text>
-    <view class="label"></view>
-</view>
-
-<view class="my-projects">
-    <text class="projects-title">我的项目：</text>
-    
-    <view class="projects-list">
-    
-      <block wx:for="{{projects}}" wx:key="index">
-      <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}">
-        <view class="project-info">
-          <text class="project-title">项目名称: {{item.title.length > 10 ? '点击查看详情': item.title}}</text>
-          <text class="project-description">项目描述: {{item.description.length > 10 ?'点击查看详情' : item.description}}</text>
+<view class="container">
+    <view class="user-info">
+        <image class="circleImage" src="{{avatarUrl}}" style="position: relative; left: -100rpx; top: 0rpx"></image>
+        <view class="user-details">
+            <view class="label-list" style="position: relative; left: -36rpx; top: -49rpx">
+                <text class="label" style="position: relative; left: -36rpx; top: -21rpx">昵称: {{userInfo.nickName}}</text>
+            </view>
+            <view class="label-list" style="position: relative; left: -36rpx; top: -49rpx">
+                <text class="label" style="position: relative; left: -36rpx; top: 4rpx">账号: {{userInfo.account_id}}</text>
+            </view>
         </view>
-      </view>
-      <view class="divider"></view> <!-- 添加分隔线 -->
-    </block>
-        <block wx:if="{{projects.length === 0}}">
-            <text class="no-projects">暂时没有项目哦~</text>
-        </block>
     </view>
+
+    <view class="my-projects">
+        <text class="projects-title">我的项目：</text>
+        <view class="projects-list">
+            <block wx:for="{{projects}}" wx:key="index">
+                <view class="project-item show" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}">
+                    <view class="project-info">
+                        <text class="project-title">项目名称: {{item.title.length > 10 ? '点击查看详情' : item.title}}</text>
+                        <text class="project-description">项目描述: {{item.description.length > 10 ? '点击查看详情' : item.description}}</text>
+                    </view>
+                </view>
+                <view class="divider"></view> <!-- 添加分隔线 -->
+            </block>
+            <block wx:if="{{projects.length === 0}}">
+                <text class="no-projects">暂时没有项目哦~</text>
+            </block>
+        </view>
+    </view>
+
+    <button bindtap="changeUserAvatar" class="buttonType1" style="position: relative; left: 125rpx; top: -545rpx; width: 156rpx; display: block; box-sizing: border-box; height: 83rpx">修改头像</button>
+    <button bindtap="changeUser" class="buttonType">切换用户</button>
 </view>
-<button bindtap="changeUserAvatar" class="buttonType">修改头像</button>
-<button bindtap="changeUser" class="buttonType">切换用户</button>

@@ -20,9 +20,10 @@ Page({
         db.collection('projects') 
           .get()
           .then((res: any) => {
+      const reversedProjects=res.data.reverse();
             this.setData({
-              projects: res.data,
-    filteredProjects: res.data
+              projects: reversedProjects,
+    filteredProjects: reversedProjects
             });
             console.log('项目列表:', this.data.projects); // 用于调试
           })
@@ -38,16 +39,16 @@ Page({
     filterProjects() {
       const { projects, searchTerm } = this.data;
       if (!searchTerm) {
-        this.setData({ filteredProjects: projects });
+        this.setData({ filteredProjects: projects.reverse() }); // 反转原始项目数组
         return;
       }
-  
+    
       const filteredProjects = projects.filter(project =>
         (project.title || '').toLowerCase().includes(searchTerm) ||
         (project.description || '').toLowerCase().includes(searchTerm)
       );
-  
-      this.setData({ filteredProjects });
+    
+      this.setData({ filteredProjects: filteredProjects.reverse() }); // 反转过滤后的数组
     },
   goToDetail(event: any) {
     const { title, description } = event.currentTarget.dataset;

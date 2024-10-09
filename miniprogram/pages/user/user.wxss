@@ -1,65 +1,52 @@
-.inputBox {
-  width: 70%;
-  padding: 10rpx 14rpx;
-  margin: 8rpx 0;
-  margin-left: 100rpx;
+html, body {
+  height: 100%; /* 设置html和body高度为100% */
+  margin: 0; /* 去除默认的外边距 */
+}
+
+.container {
+  min-height: 100vh;  /* 确保容器至少占满整个视口高度 */
+  background: linear-gradient(to bottom, #a8d8ff, #e1f5fe); /* 渐变浅蓝色背景 */
+  padding: 20px;
   box-sizing: border-box;
-  border: 1rpx solid #aaa;
-  border-radius: 8rpx; /* 添加圆角 */
-  outline: none;
+  display: flex; /* 启用 Flexbox */
+  flex-direction: column; /* 设置为垂直排列 */
+  align-items: center; /* 水平居中 */
 }
 
 .circleImage {
-  margin: 80rpx auto 40rpx auto; /* 上下居中调整 */
   height: 245rpx;
   width: 245rpx;
   border-radius: 50%;
-  display: block; /* 水平居中 */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* 添加阴影效果 */
 }
 
-.userNickname {
-  margin-top: 30rpx;
-  text-align: center; /* 居中显示 */
-  font-size: 40rpx;
-  color: #333;
-  font-weight: bold;
-  
+.user-info {
+  display: flex; /* 启用 Flexbox 布局 */
+  align-items: center; /* 垂直居中对齐 */
+  margin: 40rpx 0; /* 适当的上下边距 */
+}
+
+.user-details {
+  display: flex; /* 启用 Flexbox 布局 */
+  flex-direction: column; /* 垂直排列昵称和账号 */
+  margin-left: 60rpx; /* 与头像之间的间距 */
 }
 
 .label-list {
   display: flex;
-  width: 100%;
-  height: 50rpx;
-  align-items: center;
-  border-bottom: 1rpx solid #e8e8e8;
-  padding: 10rpx 0; /* 上下内边距 */
-  display: block; /* 水平居中 */
+  align-items: center; /* 垂直居中对齐 */
+  padding: 5rpx 0; /* 上下内边距 */
 }
 
-.label-list .label {
+.label {
   color: #333;
   font-size: 32rpx;
-  margin-left: 0rpx;
   font-weight: bold;
-  text-align: center;
-  display: block; /* 水平居中 */
-}
-
-.input-box {
-  position: relative;
-  left: 20px;
-}
-
-.place {
-  align-items: center;
-  font-size: 32rpx;
-  left: 20rpx;
-  color: #666;
 }
 
 .buttonType,
 .confirmButtonType {
-  margin: 30rpx auto 0 auto; /* 居中对齐 */
+  margin: 30rpx auto; /* 居中对齐 */
   padding: 20rpx 40rpx; /* 内边距 */
   background-color: #007aff;
   color: white;
@@ -67,19 +54,38 @@
   border-radius: 8rpx;
   text-align: center;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 按钮阴影 */
+  transition: background-color 0.1s; /* 添加过渡效果 */
+}
+.buttonType1,
+.confirmButtonType {
+  margin: 30rpx auto; /* 居中对齐 */
+  padding: 25rpx 25rpx; /* 内边距 */
+  background-color: #030216e7;
+  color: white;
+  font-size:25rpx;
+  border-radius: 30rpx;
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 按钮阴影 */
+  transition: background-color 0.1s; /* 添加过渡效果 */
+}
+.buttonType:hover,
+.confirmButtonType:hover {
+  background-color: #0056b3; /* 鼠标悬停时变暗 */
 }
 
 .my-projects {
   border-bottom: 1rpx solid #e8e8e8;
-  margin-top: 40rpx;
+  margin-top: -200rpx;
   padding-bottom: 10rpx;
+  width: 100%; /* 填满宽度 */
 }
 
 .projects-title {
   font-size: 36rpx;
   font-weight: bold;
-  margin: 0 0 20rpx 20rpx;
+  margin: 20rpx 20rpx; /* 上下边距 */
   color: #333;
+  text-align: left; /* 左对齐 */
 }
 
 .projects-list {
@@ -90,30 +96,35 @@
 }
 
 .project-item {
-  width: 90%;
+  width: 90%; /* 使用90%宽度 */
   padding: 20rpx;
   border: 1rpx solid #ddd;
   margin-bottom: 20rpx;
   border-radius: 10rpx;
   background-color: #f7f9fa;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 添加阴影效果 */
+  transition: transform 0.3s; /* 添加过渡效果 */
 }
+
+.project-item:hover {
+  transform: translateY(-2px); /* 鼠标悬停时稍微上升 */
+}
+
 .project-info {
-  display: flex;            /* 使用flex布局 */
-  flex-direction: column;   /* 垂直排列 */
-  
+  display: flex; /* 使用flex布局 */
+  flex-direction: column; /* 垂直排列 */
 }
 
 .project-title {
-  font-size: 18px;          /* 项目名称字体大小 */
-  font-weight: bold;        /* 字体加粗 */
-  color: #34495e;           /* 项目名称字体颜色 */
+  font-size: 18px; /* 项目名称字体大小 */
+  font-weight: bold; /* 字体加粗 */
+  color: #34495e; /* 项目名称字体颜色 */
   margin-bottom: 10rpx;
 }
 
 .project-description {
-  font-size: 14px;          /* 项目描述字体大小 */
-  color: #7f8c8d;           /* 项目描述字体颜色 */
+  font-size: 14px; /* 项目描述字体大小 */
+  color: #7f8c8d; /* 项目描述字体颜色 */
 }
 
 .no-projects {
