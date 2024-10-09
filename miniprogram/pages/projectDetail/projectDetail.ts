@@ -11,7 +11,7 @@ Page({
   },
 
   onLoad(options: any) {
-    const { title, description ,nickname} = options;
+    const { title, nickname, description } = options;
     this.setData({
       'project.title': title || '项目名称',
       'project.nickname': nickname || '项目负责人昵称',
