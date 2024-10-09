@@ -20,16 +20,12 @@ Page({
     },
   
     applyForProject() {
-      wx.navigateTo({
-        url: '/pages/apply/apply'
-      });    
+        wx.showToast({
+      icon: 'none',
+      title: '已同意',
+    })  
       
     },
   
-    goToChat() {
-      wx.navigateTo({
-        url: '/pages/chat/chat'
-      });
-    }
   });
   
