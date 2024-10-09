@@ -1,0 +1,14 @@
+<view class="container">
+  <image src="/images/1.png" mode="aspectFit" ></image>
+  <view class="form-item">
+    <text class="label">申请理由:</text>
+    <textarea placeholder="请输入申请理由" bindinput="onReasonInput" class="textarea" />
+  </view>
+
+  <view class="form-item">
+    <text class="label">联系方式:</text>
+    <input style="height: 77rpx; display: block; box-sizing: border-box" type="text" placeholder="请输入您的联系方式" bindinput="onContactInput" class="input" />
+  </view>
+
+  <button bindtap="submitApplication" class="submit-button">提交申请</button>
+</view>

@@ -1,0 +1,33 @@
+
+<view class="welcome-text">
+    <text class="welcome-message">欢迎来到ProjectPartner！</text>
+  </view>
+  <view class="welcome-text">
+    <text class="welcome-message1">在这里找到志同道合的小伙伴吧~</text>
+  </view>
+  <image src="/images/3.png" mode="aspectFit"  style="position: relative; left: 68rpx; top: -18rpx"></image>
+<view class="label-list">
+    <view class="label">账号</view>
+    <view class="input-box">
+        <input type="text" placeholder="请输入账号" bindinput="getUserAccount"/>
+    </view>
+</view>
+
+<view class="label-list">
+    <view class="label">密码</view>
+    <view class="input-box">
+        <input type="text" placeholder="请输入密码" bindinput="getUserPassword"/>
+    </view>
+</view>
+
+<!-- <view class="label-list">
+    <view class="label">确认密码</view>
+    <view class="input-box">
+        <input placeholder-class="place" type="text" placeholder="确认密码" bindinput="confirmUserPassword"/>
+    </view>
+</view> -->
+
+
+<button bindtap="login" type="primary" class="buttonType">登录</button>
+
+<button type="default" bindtap="toRegister" class="buttonType">注册</button>
