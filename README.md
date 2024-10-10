@@ -99,6 +99,7 @@ miniprogram/
 ```
 ## （2）使用说明
 这是我们小程序的二维码：
+![a34cee2440e5258e30cad74b851fc129](https://github.com/user-attachments/assets/d8ae9576-3d1c-40d3-bb7c-0aa83eeb3bd8)
 
 它是有一定的时效的！所以如果想要预览麻烦您先联系一下102201241小戴或102201542小曾获取一下最新的二维码与添加体验成员，谢谢！！
 
