@@ -71,6 +71,7 @@ Page({
           return;
         }
         else {
+
           wx.cloud.database().collection('chat_user').add({
             data:{
               avatarUrl: that.data.userInfo.avatarUrl,
@@ -85,8 +86,12 @@ Page({
               // 将用户名和密码保存到全局变量 app.globalData中
               app.globalData.userInfo.account_id = that.data.account_id;
               app.globalData.userInfo.password = that.data.password;
-              wx.switchTab({
-                url: '/pages/message/message',
+              wx.showToast({
+                icon : 'none',
+                title: '注册成功',
+              })
+              wx.navigateTo({
+                url: '/pages/login/login',
               })
             }
           })
