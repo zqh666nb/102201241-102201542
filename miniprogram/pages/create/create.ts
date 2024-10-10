@@ -6,6 +6,7 @@ Page({
     title: '',
     description: '',
     likecount:0,
+    members:[],
     titleMaxLength: 15,
     nicknameMaxLength: 10,
     descriptionMaxLength: 200 // 最大字数限制
@@ -108,7 +109,8 @@ Page({
       });
       return;
     }
-    const account_id: string = app.globalData.userInfo.account_id; 
+    const account_id: string = app.globalData.userInfo.account_id;
+     
     // 发布项目到数据库
     wx.getUserProfile({
       desc: '用于获取创建者的昵称', // 授权说明
@@ -122,7 +124,8 @@ Page({
             description,
             nickname,
             account_id, // 添加创建者昵称
-            likecount
+            likecount,
+            members: [account_id]
           }
         }).then(res => {
           const newProject = {
@@ -131,7 +134,8 @@ Page({
             description,
             nickname,
             account_id, // 包含昵称
-            likecount
+            likecount,
+            members: [account_id]
           };
 
           // 确保全局项目数组存在
@@ -169,5 +173,7 @@ Page({
         });
       }
     });
+ 
+
   }
 });

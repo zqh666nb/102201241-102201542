@@ -2,7 +2,7 @@
   
   <view class="project-list" style="position: relative; left: 0rpx; top: -60rpx">
     <block wx:for="{{filteredApplications}}" wx:key="index">
-      <view class="project-item show" bindtap="goToDetail" data-reason="{{item.reason}}" data-contact="{{item.contact}}" data-project_id="{{item.project_id}} "data-account_id="{{item.account_id}}">
+      <view class="project-item show" bindtap="goToDetail" data-reason="{{item.reason}}" data-contact="{{item.contact}}" data-project_id="{{item.project_id}}"data-account_id="{{item.account_id}}">
         <view class="project-info">
           <text class="project-title">申请人账号： {{item.account_id}}</text>
           <text class="project-description">申请理由: {{item.reason}}</text>

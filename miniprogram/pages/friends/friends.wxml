@@ -1,9 +1,7 @@
 
-
 <view class="label">新朋友</view>
 <block wx:for="{{new_friends}}">
     <view class="user-list">
-
     <view class="left">
 
         <image class="face" src="{{item.userA_avatarUrl}}"></image>    
@@ -46,7 +44,10 @@
 
 
 <view class="label">其他用户</view>
-<block wx:for="{{user_list}}">
+<view class="search-bar">
+    <input type="text" placeholder="搜索用户" bindinput="onSearchInput" class="search-input" />
+  </view>
+<block wx:for="{{filteredUserList}}">
 <view class="user-list">
 
     <view class="left">
@@ -58,13 +59,16 @@
 
     </block>
     </view>
+
     <view class="right">
-    
-    
     <button size="mini" bindtap="addFriend" data-index="{{index}}">添加好友</button>
-    
-    
     </view>
 
+    
 </view>
 </block>
+<block wx:if="{{filteredUserList.length === 0}}">
+    <view class="no-results">
+      暂无相关用户
+    </view>
+  </block>

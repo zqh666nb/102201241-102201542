@@ -19,7 +19,12 @@
   <view class="project-detail-box">
     <text class="detail-content">{{project.description}}</text>
   </view>
-
+  <view class="my-projects">
+        <text class="projects-title">项目成员</text>
+      </view>
+      <view class="project-detail-box">
+    <text class="detail-content">{{project.members}}</text>
+  </view>
   <!-- 按钮区 -->
   <view class="button-container">
     <button class="apply-button" bindtap="applyForProject">收到的申请</button>

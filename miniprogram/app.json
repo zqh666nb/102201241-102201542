@@ -51,12 +51,13 @@
           "iconPath": "images/icon/message.png",
           "selectedIconPath": "images/icon/message.png"
       },
-        {
-            "pagePath": "pages/message/message",
-            "text": "聊天室",
-            "iconPath": "images/icon/friends.png",
-            "selectedIconPath": "images/icon/friends.png"
-        },
+      {
+        "pagePath": "pages/friends/friends",
+        "text": "通讯录",
+        "iconPath": "images/icon/friends.png",
+        "selectedIconPath": "images/icon/friends.png"
+    },
+     
         {
             "pagePath": "pages/user/user",
             "text": "个人中心",
