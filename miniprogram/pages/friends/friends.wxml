@@ -11,14 +11,15 @@
     <view class="right">
 
     <button size="mini" bindtap="acceptNewFriend" data-index="{{index}}">同意</button>
-
-</view>
-
-</view>
-
-
+    
+    </view>
+    </view>
 </block>
-
+<block wx:if="{{new_friends.length === 0}}">
+    <view class="no-results">
+      暂无好友申请
+    </view>
+  </block>
 <view class="label">我的好友</view>
 <block wx:for="{{my_friends}}">
 <view class="user-list">
@@ -38,10 +39,15 @@
         <view class="nick-name">{{item.userA_account_id}}</view>
     </view>
     </block>
-
+    
 </view>
-</block>
 
+</block>
+<block wx:if="{{my_friends.length === 0}}">
+    <view class="no-results">
+      暂无好友
+    </view>
+  </block>
 
 <view class="label">其他用户</view>
 <view class="search-bar">
