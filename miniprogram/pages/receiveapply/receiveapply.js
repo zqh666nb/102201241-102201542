@@ -25,7 +25,7 @@ Page({
     const db = wx.cloud.database();
     // 从 applications 集合中获取所有申请，筛选出 project_id 等于传递的 projectId
     db.collection('applications')
-      .where({ project_id: project_id }) // 筛选条件
+      .where({ project_id: project_id}) // 筛选条件
       .get()
       .then((res) => {
         // 获取申请数据
@@ -48,6 +48,7 @@ Page({
     const { applications, searchTerm } = this.data;
     if (!searchTerm) {
       this.setData({ filteredApplications: applications }); // 显示所有申请
+
       return;
     }
 
@@ -57,12 +58,14 @@ Page({
     );
 
     this.setData({ filteredApplications }); // 更新过滤后的申请列表
+
   },
 
   goToDetail(event) {
-    const { reason, contact, account_id } = event.currentTarget.dataset; // 从事件中获取数据
+    const { reason, contact, account_id ,project_id} = event.currentTarget.dataset; // 从事件中获取数据
+
     wx.navigateTo({
-      url: `/pages/applydetail/applydetail?reason=${reason}&contact=${contact}&account_id=${account_id}`
+      url: `/pages/applydetail/applydetail?reason=${reason}&contact=${contact}&account_id=${account_id}&project_id=${project_id}`
    });
 }
 });

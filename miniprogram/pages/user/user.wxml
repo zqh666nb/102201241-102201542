@@ -26,7 +26,7 @@
       <view class="project-item" bindtap="goToDetail" data-title="{{item.title}}" data-description="{{item.description}}" data-nickname="{{item.nickname}}" data-likecount="{{item.likecount}}" data-_id="{{item._id}}"  >
         <view class="project-info">
           <!-- 强制换行显示项目标题和描述 -->
-          <view class="project-title">项目标题: {{item.title.length > 10 ? '点击查看详情' : item.title}}</view>
+          <view class="project-title">项目标题: {{item.title}}</view>
           <view class="project-description">项目描述: {{item.description.length > 10 ? '点击查看详情' : item.description}}</view>
         </view>
       </view>

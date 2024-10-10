@@ -92,29 +92,3 @@ html, body {
 .apply-button:hover, .chat-button:hover {
   background-color: #005bb5; /* Darker shade on hover */
 }
-
-.header {
-  display: flex; /* Flex layout for header */
-  justify-content: flex-start; /* Left align */
-  align-items: center; /* Vertically center */
-  padding: 10px; /* Padding around header */
-  background-color: #f5f5f5; /* Header background color */
-}
-
-.back-button {
-  background-color: #007aff; /* Button color */
-  color: white; /* Font color */
-  border: none; /* Remove border */
-  padding: 5px 10px; /* Padding */
-  border-radius: 5px; /* Rounded corners */
-  position: absolute; /* Absolute positioning */
-  top: 20px; /* Distance from top */
-  left: 10px; /* Distance from left */
-  font-size: 14px; /* Font size */
-  max-width: 80px; /* Max width */
-  z-index: 10; /* Ensure button is on top */
-}
-
-.back-button:hover {
-  background-color: #005bb5; /* Darker shade on hover */
-}
