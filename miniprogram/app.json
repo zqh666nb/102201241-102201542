@@ -3,7 +3,6 @@
     "pages/login/login",
     "pages/register/register",
     "pages/user/user",
-    "pages/message/message",
     "pages/friends/friends",
     "pages/apply/apply",
     "pages/receiveapply/receiveapply",
